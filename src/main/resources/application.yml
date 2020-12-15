@@ -11,6 +11,11 @@ spring:
       enabled: true   #热部署生效
       exclude: WEB-INF/**   #设置重启目录
 
+  freemarker:
+    cache: false
+
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**Mapper.xml
+
+
 
