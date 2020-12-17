@@ -21,15 +21,9 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("m_post")
-public class Post implements Serializable {
+public class Post extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
-
-    /**
-     * 主键ID
-     */
-    @TableId(value = "id", type = IdType.AUTO)
-    private Long id;
 
     /**
      * 标题
@@ -87,16 +81,5 @@ public class Post implements Serializable {
      * 状态
      */
     private Integer status;
-
-    /**
-     * 创建日期
-     */
-    private LocalDateTime created;
-
-    /**
-     * 最后更新日期
-     */
-    private LocalDateTime modified;
-
 
 }

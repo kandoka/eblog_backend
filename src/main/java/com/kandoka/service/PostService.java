@@ -12,5 +12,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2020-11-25
  */
 public interface PostService extends IService<Post> {
-
+    public void initWeekRank();
 }

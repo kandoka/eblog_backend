@@ -32,12 +32,9 @@ public class ContextStartupConfig implements ApplicationRunner, ServletContextAw
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-        List<Category> categories = categoryService.list(new QueryWrapper<Category>()
-                .eq("status", 0)
-        );
-        servletContext.setAttribute("categorys", categories);
+        servletContext.setAttribute("base", servletContext.getContextPath());
 
-//        postService.initWeekRank();
+        postService.initWeekRank();
     }
 
     @Override
